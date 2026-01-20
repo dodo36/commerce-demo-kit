@@ -1,6 +1,7 @@
 "use client";
 
 import { Product } from '@/config/siteConfig';
+import Link from 'next/link';
 import { useCart } from '@/lib/cartStore';
 import { track } from '@/lib/analytics';
 import { Plus } from 'lucide-react';
