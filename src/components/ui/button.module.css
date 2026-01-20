@@ -1,0 +1,33 @@
+/* Button Styles */
+.primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.secondary {
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    background: transparent;
+}
+
+.secondary:hover {
+    border-color: var(--color-accent);
+}
+
+.ghost {
+    background: transparent;
+    color: var(--color-text);
+}
+
+.ghost:hover {
+    background: var(--color-surface);
+}
+
+.full {
+    width: 100%;
+}
+
+.loading {
+    opacity: 0.7;
+    cursor: wait;
+}
