@@ -10,16 +10,16 @@
     },
     "dependencies": {
         "lucide-react": "^0.300.0",
-        "next": "latest",
-        "react": "latest",
-        "react-dom": "latest"
+        "next": "^14.2.14",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
-        "@types/node": "latest",
-        "@types/react": "latest",
-        "@types/react-dom": "latest",
-        "eslint": "latest",
-        "eslint-config-next": "latest",
-        "typescript": "latest"
+        "@types/node": "^20.0.0",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "eslint": "^8.0.0",
+        "eslint-config-next": "^14.2.14",
+        "typescript": "^5.0.0"
     }
 }
