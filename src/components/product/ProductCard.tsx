@@ -1,6 +1,5 @@
 "use client";
 
-import Link from 'next/link';
 import { Product } from '@/config/siteConfig';
 import { useCart } from '@/lib/cartStore';
 import { track } from '@/lib/analytics';

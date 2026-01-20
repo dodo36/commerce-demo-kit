@@ -1,4 +1,4 @@
-import { LucideIcon, ShieldCheck, Truck, RotateCcw, Star, Package, CreditCard } from 'lucide-react';
+import { ShieldCheck, Truck, RotateCcw, Star, Package, CreditCard } from 'lucide-react';
 
 export type Product = {
     id: string;
