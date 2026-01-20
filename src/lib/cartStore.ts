@@ -127,8 +127,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     const count = state.items.reduce((acc, i) => acc + i.qty, 0);
 
     return (
-        <CartContext.Provider value= {{ state, addItem, removeItem, updateQty, toggleCart, subtotal, count }
-}>
+        <CartContext.Provider
+            value= {{ state, addItem, removeItem, updateQty, toggleCart, subtotal, count }
+}
+        >
     { children }
     </CartContext.Provider>
     );
