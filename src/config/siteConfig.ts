@@ -1,5 +1,12 @@
 import { ShieldCheck, Truck, RotateCcw, Star, Package, CreditCard } from 'lucide-react';
 
+export type ProductVariant = {
+    id: string;
+    title: string;
+    available: boolean;
+    price: number;
+};
+
 export type Product = {
     id: string;
     handle: string;
@@ -11,7 +18,7 @@ export type Product = {
     tags: string[];
     images: string[];
     options: { name: string; values: string[] }[];
-    variants: { id: string; title: string; available: boolean; price: number }[];
+    variants: ProductVariant[];
     description: string;
     features: string[];
     materials: string;
@@ -120,7 +127,7 @@ export const siteConfig = {
                 { name: "Size", values: ["XS", "S", "M", "L", "XL"] },
                 { name: "Color", values: ["Camel", "Charcoal", "Black"] }
             ],
-            variants: [], // Will generate mock variants in helper
+            variants: [] as ProductVariant[], // Will generate mock variants in helper
             description: "A timeless coat crafted from 100% Merino wool. Features a relaxed fit, notched lapels, and deep pockets.",
             features: ["100% Merino Wool", "Fully Lined", "Internal Pocket", "Dry Clean Only"],
             materials: "Shell: 100% Wool. Lining: 100% Viscose.",
@@ -142,7 +149,7 @@ export const siteConfig = {
                 { name: "Size", values: ["S", "M", "L", "XL"] },
                 { name: "Color", values: ["White", "Blue"] }
             ],
-            variants: [],
+            variants: [] as ProductVariant[],
             description: "Crisp, breathable, and built to last. Our Oxford shirt is the foundation of any wardrobe.",
             features: ["Organic Cotton", "Mother of Pearl Buttons", "Tailored Fit"],
             materials: "100% Organic Cotton",
@@ -165,7 +172,7 @@ export const siteConfig = {
                 { name: "Waist", values: ["28", "30", "32", "34", "36"] },
                 { name: "Length", values: ["30", "32", "34"] }
             ],
-            variants: [],
+            variants: [] as ProductVariant[],
             description: "14oz raw selvedge denim from Okayama, Japan. Will fade beautifully with wear.",
             features: ["14oz Raw Denim", "Button Fly", "Chain Stitched Hem"],
             materials: "100% Cotton",
@@ -186,7 +193,7 @@ export const siteConfig = {
             options: [
                 { name: "Color", values: ["Black", "Tan", "Olive"] }
             ],
-            variants: [],
+            variants: [] as ProductVariant[],
             description: "Vegetable tanned leather that develops a unique patina over time. Fits a 15-inch laptop.",
             features: ["Full Grain Leather", "Solid Brass Hardware", "Internal Zip Pocket"],
             materials: "100% Leather",
@@ -208,7 +215,7 @@ export const siteConfig = {
                 { name: "Size", values: ["XS", "S", "M", "L", "XL"] },
                 { name: "Color", values: ["Grey", "Navy", "Oatmeal"] }
             ],
-            variants: [],
+            variants: [] as ProductVariant[],
             description: "Grade-A Mongolian cashmere. Lightweight yet incredibly warm.",
             features: ["100% Cashmere", "Ribbed Cuffs", "Regular Fit"],
             materials: "100% Cashmere",
@@ -230,7 +237,7 @@ export const siteConfig = {
                 { name: "Waist", values: ["30", "32", "34", "36"] },
                 { name: "Color", values: ["Khaki", "Navy", "Olive"] }
             ],
-            variants: [],
+            variants: [] as ProductVariant[],
             description: "Stretch cotton twill for ultimate comfort and durability.",
             features: ["Stretch Cotton", "Slim Straight Fit", "Garment Dyed"],
             materials: "98% Cotton, 2% Elastane",
@@ -251,7 +258,7 @@ export const siteConfig = {
             options: [
                 { name: "Size", values: ["40", "41", "42", "43", "44", "45"] }
             ],
-            variants: [],
+            variants: [] as ProductVariant[],
             description: "Minimalist sneakers made from Italian nappa leather. Margom rubber sole.",
             features: ["Italian Leather", "Margom Sole", "Leather Lined"],
             materials: "Leather Upper, Rubber Sole",
@@ -272,7 +279,7 @@ export const siteConfig = {
             options: [
                 { name: "Pattern", values: ["Geometric", "Floral"] }
             ],
-            variants: [],
+            variants: [] as ProductVariant[],
             description: "Hand-rolled edges and vibrant prints. The perfect finishing touch.",
             features: ["100% Silk", "Hand Rolled", "Made in France"],
             materials: "100% Silk",
