@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useReducer, useEffect, PropsWithChildren } from 'react';
 
 export type CartItem = {
     handle: string;
@@ -89,7 +89,7 @@ const CartContext = createContext<{
     count: number;
 } | undefined>(undefined);
 
-export function CartProvider({ children }: { children: ReactNode }) {
+export function CartProvider({ children }: PropsWithChildren): JSX.Element {
     const [state, dispatch] = useReducer(cartReducer, initialState);
 
     // Load from local storage on mount
